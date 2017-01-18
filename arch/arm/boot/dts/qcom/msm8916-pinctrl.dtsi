@@ -1199,6 +1199,20 @@
 			};
 		};
 
+		hs_txrx_pins {
+			qcom,pins = <&gp 4>,<&gp 5>;
+			qcom,num-grp-pins = <2>;
+			label = "hs_txrx_pins";
+			hs_txrx_alt: hs_txrx_alt {
+				drive-strength = <2>;
+				qcom,pin-func = <2>;
+			};
+			hs_txrx_gpio: hs_txrx_gpio {
+				drive-strength = <2>;
+				qcom,pin-func = <0>;
+			};
+		};
+
 		/* add pingrp for touchscreen */
 		pmx_ts_int_active {
 			qcom,pins = <&gp 13>;

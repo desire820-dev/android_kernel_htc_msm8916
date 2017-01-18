@@ -122,6 +122,7 @@ dtb-$(CONFIG_ARCH_MSM8916) += msm8916-cdp.dtb \
         msm8929-cdp-jdi.dtb
 
 ifeq ($(CONFIG_MACH_A51_DTUL), y)
+	dtb-$(CONFIG_ARCH_MSM8916)  += msm8939-a51dtul.dtb
 endif
 
 ifeq ($(CONFIG_MACH_A51_TUHL), y)

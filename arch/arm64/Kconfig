@@ -215,6 +215,12 @@ config MACH_M8QL_UL
        help
          Support for HTC MSM8939 M8QL_UL
 
+config MACH_A51_DTUL
+       depends on ARCH_MSM8916
+       bool "MSM8939 A51_DTUL"
+       help
+         Support for HTC MSM8939 A51_DTUL
+
 config MACH_A52_DTUL
        depends on ARCH_MSM8916
        bool "MSM8939 A52_DTUL"

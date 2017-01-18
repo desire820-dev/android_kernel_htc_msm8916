@@ -62,17 +62,32 @@
 			};
 		};
 
-		cdc-ext-spk-pa {
-			qcom,pins = <&gp 0>;
-			qcom,num-grp-pins = <1>;
-			qcom,pin-func = <0>;
-			label = "cdc-ext-spk-pa";
-			cdc_ext_spk_pa_act: ext_spk_pa_on {
+		cdc-ext-pa-lines {
+			qcom,pins = <&gp 112>, <&gp 117>,
+					<&gp 118>, <&gp 119>;
+			qcom,num-grp-pins = <4>;
+			qcom,pin-func = <1>;
+			label = "cdc-ext-pa-lines";
+			cdc_ext_pa_act: ext_pa_on {
 				drive-strength = <8>;
-				output-low;
 				bias-pull-none;
 			};
-			cdc_ext_spk_pa_sus: ext_spk_pa_off {
+			cdc_ext_pa_sus: ext_pa_off {
+				drive-strength = <2>;
+				bias-disable;
+			};
+		};
+
+		cdc-ext-pa-ws-line {
+			qcom,pins = <&gp 110>;
+			qcom,num-grp-pins = <1>;
+			qcom,pin-func = <2>;
+			label = "cdc-ext-pa-ws-line";
+			cdc_ext_pa_ws_act: ext_pa_on {
+				drive-strength = <8>;
+				bias-pull-none;
+			};
+			cdc_ext_pa_ws_sus: ext_pa_off {
 				drive-strength = <2>;
 				bias-disable;
 			};
@@ -493,6 +508,20 @@
 			gpio_key_suspend: gpio_key_suspend {
 				drive-strength = <2>;
 				bias-pull-up;
+			};
+		};
+
+		hs_txrx_pins {
+			qcom,pins = <&gp 8>,<&gp 9>;
+			qcom,num-grp-pins = <2>;
+			label = "hs_txrx_pins";
+			hs_txrx_alt: hs_txrx_alt {
+				drive-strength = <2>;
+				qcom,pin-func = <2>;
+			};
+			hs_txrx_gpio: hs_txrx_gpio {
+				drive-strength = <2>;
+				qcom,pin-func = <0>;
 			};
 		};
 
